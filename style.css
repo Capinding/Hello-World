@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Chewy';
+    src: url(fonts/Chewy-Regular.ttf);
+}
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --text-primary-color: #ffffff;
+    --text-secondary-color: #000000;
+    --bg-primary-color: #ff6991;
+    --bg-secondary-color: #ffc5d4;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: "Chewy", system-ui;
+    font-style: normal;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url(pics/background.jpg);
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: center;
+}
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+    border-radius: 15px;
+    border: 3px solid black;
+    background-color: var(--bg-primary-color);
+}
+.card h1 {
+    color: var(--text-secondary-color);
+    padding: 0 0 10px 0;
+}
+.card .input-container {
+    display: flex;
+    gap: 13px;
+    margin: 10px 0 30px 0;
+}
+.card div input {
+    background-color: var(--text-primary-color);
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid black;
+    outline: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: 85ms ease;
+}
+.card div input:focus {
+    background-color: var(--bg-secondary-color);
+}
+.card div button {
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--bg-secondary-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.msg-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.card .msg-container .text-msg {
+    font-size: 1.1rem;
+    text-align: left;
+    font-family: monospace;
+    font-weight: 600;
+    color: var(--text-primary-color);
+    text-align: justify;
+}
+.download {
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+#download-image {
+    padding: 7px 5px;
+    background-color: var(--bg-secondary-color);
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--secondary-text-color);
+    transition: .1s ease;
+}
+#download-image:hover {
+    background-color: #e79eb2;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 90%;
+    }
+    .card div input {
+        width: 100%;
+    }
+}
